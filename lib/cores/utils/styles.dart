@@ -53,7 +53,7 @@ abstract class AppStyles {
       color: const Color(0xFF064061),
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontFamily: 'Montserrat',
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w700,
     );
   }
 

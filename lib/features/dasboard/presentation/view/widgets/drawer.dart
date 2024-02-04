@@ -3,9 +3,9 @@ import 'package:dash_board_app/features/dasboard/presentation/view/widgets/custo
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../cores/models/drawer_item_model.dart';
-import '../../../../cores/utils/Images_assets.dart';
-import '../../../../cores/utils/styles.dart';
+import '../../../../../cores/models/drawer_item_model.dart';
+import '../../../../../cores/utils/Images_assets.dart';
+import '../../../../../cores/utils/styles.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({super.key});
@@ -14,7 +14,8 @@ class CustomDrawer extends StatefulWidget {
   State<CustomDrawer> createState() => _CustomDrawerState();
 }
 
-class _CustomDrawerState extends State<CustomDrawer> {
+class _CustomDrawerState extends State<CustomDrawer>
+    with TickerProviderStateMixin {
   int currentIndex = 0;
   final drawerItemsList = [
     DrawerItemModel(title: 'DashBoard', icon: AssetsImages.imagesDashboard),
