@@ -1,4 +1,6 @@
+import 'package:dash_board_app/features/dasboard/presentation/view/widgets/quick_invoice_form_part.dart';
 import 'package:dash_board_app/features/dasboard/presentation/view/widgets/quick_invoice_header.dart';
+import 'package:dash_board_app/features/dasboard/presentation/view/widgets/title_textfield.dart';
 import 'package:flutter/material.dart';
 
 import 'last_transactions.dart';
@@ -23,10 +25,12 @@ class _QuickInvoiceSectionState extends State<QuickInvoiceSection> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           QuickInvoiceSectionHeader(),
-          SizedBox(
-            height: 24,
+          LastTransactions(),
+          Divider(
+            height: 1,
+            color: Color(0xffF1F1F1),
           ),
-          LastTransactions()
+          QuickInvoiceFormPart(),
         ],
       ),
     );

@@ -34,27 +34,30 @@ class _LastTransactionsState extends State<LastTransactions> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Latest Transaction',
-          style: AppStyles.styleMedium16(context),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        SizedBox(
-          height: 80,
-          child: ListView.builder(
-            itemBuilder: (context, index) => LastTransactionsItem(
-              lastTransactionModel: lastTransactionsList[index],
-            ),
-            itemCount: 4,
-            scrollDirection: Axis.horizontal,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 24),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Latest Transaction',
+            style: AppStyles.styleMedium16(context),
           ),
-        )
-      ],
+          const SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            height: 80,
+            child: ListView.builder(
+              itemBuilder: (context, index) => LastTransactionsItem(
+                lastTransactionModel: lastTransactionsList[index],
+              ),
+              itemCount: 4,
+              scrollDirection: Axis.horizontal,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
