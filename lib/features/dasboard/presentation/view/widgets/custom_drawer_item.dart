@@ -28,13 +28,16 @@ class CustomDrawerItem extends StatelessWidget {
         trailing: LayoutBuilder(
           builder: (context, constraints) {
             return AnimatedContainer(
-              duration: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 200),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: const Color(0xff4EB7F2),
+              ),
               onEnd: () {
                 log('hello');
               },
               width: 3.5,
               height: isActive ? constraints.maxHeight : 0,
-              color: const Color(0xff4EB7F2),
             );
           },
         ));

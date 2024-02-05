@@ -1,5 +1,5 @@
 import 'package:dash_board_app/cores/utils/size_config.dart';
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 
 abstract class AppStyles {
@@ -62,7 +62,7 @@ abstract class AppStyles {
       color: const Color(0xFFAAAAAA),
       fontSize: getResponsiveFontSize(context, fontSize: 12),
       fontFamily: 'Montserrat',
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w500,
     );
   }
 

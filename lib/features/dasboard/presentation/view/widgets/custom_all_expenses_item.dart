@@ -2,7 +2,6 @@ import 'package:dash_board_app/cores/models/custom_all_expenses_item_model.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../cores/utils/Images_assets.dart';
 import '../../../../../cores/utils/styles.dart';
 
 class CustomAllExpensesItem extends StatelessWidget {
@@ -16,7 +15,8 @@ class CustomAllExpensesItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 600),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color: isActive ? const Color(0xff4EB7F2) : Colors.white,
