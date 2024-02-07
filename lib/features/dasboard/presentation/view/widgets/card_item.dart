@@ -21,13 +21,12 @@ class CardPageViewItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        margin: const EdgeInsets.only(right: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
               contentPadding:
-                  const EdgeInsets.only(left: 31, right: 42, top: 16),
+                  const EdgeInsets.only(left: 31, right: 30, top: 16),
               title: Text('Name card',
                   style: AppStyles.styleRegular16(context).copyWith(
                     color: Colors.white,

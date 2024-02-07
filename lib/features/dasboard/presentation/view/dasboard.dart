@@ -1,6 +1,6 @@
-import 'package:dash_board_app/features/dasboard/presentation/view/widgets/card_transactions_income_section.dart';
-import 'package:dash_board_app/features/dasboard/presentation/view/widgets/drawer.dart';
 import 'package:dash_board_app/features/dasboard/presentation/view/widgets/all_expenses_and_invoice_page.dart';
+import 'package:dash_board_app/features/dasboard/presentation/view/widgets/card_Transaction_income_page.dart';
+import 'package:dash_board_app/features/dasboard/presentation/view/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class DashBoardDesktopLayout extends StatelessWidget {
@@ -20,7 +20,7 @@ class DashBoardDesktopLayout extends StatelessWidget {
           SizedBox(
             width: 24,
           ),
-          Expanded(flex: 1, child: CardTransactionsIncomeSection()),
+          Expanded(flex: 1, child: CardTransactionIncomePage()),
           SizedBox(
             width: 24,
           ),
