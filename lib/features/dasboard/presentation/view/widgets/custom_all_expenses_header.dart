@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 
 import '../../../../../cores/utils/styles.dart';
 
-class CustomAllExpensesHeader extends StatelessWidget {
-  const CustomAllExpensesHeader({super.key});
+class CustomHeader extends StatelessWidget {
+  final String header;
+
+  const CustomHeader({super.key, required this.header});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          'All Expenses',
+          header,
           style: AppStyles.styleSemiBold20(context),
         ),
         const Spacer(),

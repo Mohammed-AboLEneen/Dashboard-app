@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^2.0.9
   expandable_page_view: ^1.0.17
   smooth_page_indicator: ^1.1.0
+  fl_chart: ^0.66.1
 
 dev_dependencies:
   flutter_test:

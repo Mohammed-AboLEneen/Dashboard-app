@@ -1,10 +1,8 @@
 import 'package:dash_board_app/cores/utils/Images_assets.dart';
 import 'package:dash_board_app/features/dasboard/presentation/view/widgets/custom_all_expenses_header.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../../cores/models/custom_all_expenses_item_model.dart';
-import '../../../../../cores/utils/styles.dart';
 import 'custom_all_expenses_item.dart';
 
 class AllExpensesContainer extends StatefulWidget {
@@ -47,7 +45,9 @@ class _AllExpensesContainerState extends State<AllExpensesContainer> {
         children: [
           const Padding(
             padding: EdgeInsets.only(left: 16, top: 16, right: 16),
-            child: CustomAllExpensesHeader(),
+            child: CustomHeader(
+              header: 'All Expenses',
+            ),
           ),
           const SizedBox(
             height: 20,

@@ -21,7 +21,7 @@ class CardTransactionIncomePage extends StatelessWidget {
         SliverFillRemaining(
           hasScrollBody: false,
           child: IncomeSection(),
-        )
+        ),
       ],
     );
   }
