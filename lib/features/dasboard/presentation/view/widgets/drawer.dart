@@ -1,11 +1,9 @@
 import 'package:dash_board_app/features/dasboard/presentation/view/widgets/custom_drawer_avatar_info.dart';
 import 'package:dash_board_app/features/dasboard/presentation/view/widgets/custom_drawer_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../../cores/models/drawer_item_model.dart';
 import '../../../../../cores/utils/Images_assets.dart';
-import '../../../../../cores/utils/styles.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({super.key});
@@ -32,6 +30,7 @@ class _CustomDrawerState extends State<CustomDrawer>
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
+      width: MediaQuery.sizeOf(context).width * .6,
       child: CustomScrollView(
         slivers: [
           const SliverToBoxAdapter(

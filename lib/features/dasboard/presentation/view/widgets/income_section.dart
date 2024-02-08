@@ -52,7 +52,7 @@ class _IncomeSectionState extends State<IncomeSection> {
           ),
           IntrinsicHeight(
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 const Expanded(
                     flex: 1,
@@ -68,7 +68,7 @@ class _IncomeSectionState extends State<IncomeSection> {
                 Expanded(
                   flex: 1,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: items
                         .map((e) => IncomePiChartItem(itemModel: e))
                         .toList(),

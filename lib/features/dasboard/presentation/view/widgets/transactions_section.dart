@@ -60,12 +60,11 @@ class _TransactionsSectionState extends State<TransactionsSection> {
         const SizedBox(
           height: 10,
         ),
-        ListView.builder(
-            shrinkWrap: true,
-            itemCount: 3,
-            itemBuilder: (context, index) => TransactionItem(
-                  transactionItemModel: transactions[index],
-                ))
+        Column(
+          children: transactions
+              .map((e) => TransactionItem(transactionItemModel: e))
+              .toList(),
+        )
       ],
     );
   }

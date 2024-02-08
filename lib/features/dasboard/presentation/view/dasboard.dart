@@ -1,5 +1,6 @@
 import 'package:dash_board_app/features/dasboard/presentation/view/widgets/adaptive_layout_builder.dart';
 import 'package:dash_board_app/features/dasboard/presentation/view/widgets/dash_board_desktop_layout.dart';
+import 'package:dash_board_app/features/dasboard/presentation/view/widgets/dashboard_mobile_layout.dart';
 import 'package:dash_board_app/features/dasboard/presentation/view/widgets/dashboard_tablet_layout.dart';
 import 'package:dash_board_app/features/dasboard/presentation/view/widgets/drawer.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ class _DashBoradViewState extends State<DashBoardView> {
     SizeConfig.init(context);
     return Scaffold(
       key: scaffoldKey,
+      backgroundColor: const Color(0xffF7F9FA),
       appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? AppBar(
               elevation: 0,
@@ -32,12 +34,11 @@ class _DashBoradViewState extends State<DashBoardView> {
                   icon: const Icon(Icons.menu)),
             )
           : null,
-      backgroundColor: const Color(0xFFF7F9FA),
       drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? const CustomDrawer()
           : null,
       body: AdaptiveLayout(
-        mobileLayout: (context) => const SizedBox(),
+        mobileLayout: (context) => const DashBoardMobileLayout(),
         tabletLayout: (context) => const DashBoardTabletLayout(),
         desktopLayout: (context) => const DashBoardDesktopLayout(),
       ),

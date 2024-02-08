@@ -8,21 +8,13 @@ class CardTransactionIncomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: CardTransactionsSection(),
+    return const Column(
+      children: [
+        CardTransactionsSection(),
+        SizedBox(
+          height: 20,
         ),
-        SliverToBoxAdapter(
-          child: SizedBox(
-            height: 20,
-          ),
-        ),
-        SliverFillRemaining(
-          hasScrollBody: false,
-          fillOverscroll: true,
-          child: IncomeSection(),
-        ),
+        IncomeSection()
       ],
     );
   }
