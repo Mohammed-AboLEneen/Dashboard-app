@@ -43,19 +43,25 @@ class CardPageViewItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(
-                    '0918 8124 0042 8129',
-                    style: AppStyles.styleSemiBold24(context).copyWith(
-                      color: Colors.white,
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      '0918 8124 0042 8129',
+                      style: AppStyles.styleSemiBold24(context).copyWith(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   const SizedBox(
-                    height: 8,
+                    height: 5,
                   ),
-                  Text(
-                    '12/20 - 124',
-                    style: AppStyles.styleRegular16(context)
-                        .copyWith(color: Colors.white),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      '12/20 - 124',
+                      style: AppStyles.styleRegular16(context)
+                          .copyWith(color: Colors.white),
+                    ),
                   ),
                 ],
               ),

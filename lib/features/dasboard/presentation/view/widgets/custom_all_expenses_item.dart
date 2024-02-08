@@ -27,19 +27,27 @@ class CustomAllExpensesItem extends StatelessWidget {
         right: 20,
         top: 20,
       ),
-      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              CircleAvatar(
-                backgroundColor: const Color(0xffF1F1F1),
-                radius: 30,
-                child: SvgPicture.asset(
-                  customAllExpensesItemModel.image,
-                  width: 32,
-                  height: 32,
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 50),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: CircleAvatar(
+                      backgroundColor: const Color(0xffF1F1F1),
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: SvgPicture.asset(
+                          customAllExpensesItemModel.image,
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
               const Spacer(),

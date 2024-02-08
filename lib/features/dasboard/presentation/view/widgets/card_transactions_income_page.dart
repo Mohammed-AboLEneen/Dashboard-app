@@ -10,9 +10,6 @@ class CardTransactionsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(top: 24, left: 15, bottom: 24, right: 15),
-      margin: const EdgeInsets.only(
-        top: 40,
-      ),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),

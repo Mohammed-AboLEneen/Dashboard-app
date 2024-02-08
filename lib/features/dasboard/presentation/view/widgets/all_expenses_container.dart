@@ -35,7 +35,6 @@ class _AllExpensesContainerState extends State<AllExpensesContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 40),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
@@ -52,23 +51,59 @@ class _AllExpensesContainerState extends State<AllExpensesContainer> {
           const SizedBox(
             height: 20,
           ),
-          Row(
-            children: allExpensesList.asMap().entries.map((e) {
-              return Expanded(
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      activeItem = e.key;
-                    });
-                  },
-                  child: CustomAllExpensesItem(
-                    customAllExpensesItemModel: allExpensesList[e.key],
-                    isActive: activeItem == e.key,
-                  ),
+          Row(children: [
+            const SizedBox(
+              width: 4,
+            ),
+            Expanded(
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    activeItem = 0;
+                  });
+                },
+                child: CustomAllExpensesItem(
+                  customAllExpensesItemModel: allExpensesList[0],
+                  isActive: activeItem == 0,
                 ),
-              );
-            }).toList(),
-          )
+              ),
+            ),
+            const SizedBox(
+              width: 4,
+            ),
+            Expanded(
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    activeItem = 1;
+                  });
+                },
+                child: CustomAllExpensesItem(
+                  customAllExpensesItemModel: allExpensesList[1],
+                  isActive: activeItem == 1,
+                ),
+              ),
+            ),
+            const SizedBox(
+              width: 4,
+            ),
+            Expanded(
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    activeItem = 2;
+                  });
+                },
+                child: CustomAllExpensesItem(
+                  customAllExpensesItemModel: allExpensesList[2],
+                  isActive: activeItem == 2,
+                ),
+              ),
+            ),
+            const SizedBox(
+              width: 4,
+            ),
+          ])
         ],
       ),
     );

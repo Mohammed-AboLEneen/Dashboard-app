@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:dash_board_app/cores/models/drawer_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../../../../cores/utils/styles.dart';
 
 class CustomDrawerItem extends StatelessWidget {
@@ -19,11 +20,15 @@ class CustomDrawerItem extends StatelessWidget {
           width: 24,
           height: 24,
         ),
-        title: Text(
-          itemModel.title,
-          style: isActive
-              ? AppStyles.styleBold16(context)
-              : AppStyles.styleRegular16(context),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            itemModel.title,
+            style: isActive
+                ? AppStyles.styleBold16(context)
+                : AppStyles.styleRegular16(context),
+          ),
         ),
         trailing: LayoutBuilder(
           builder: (context, constraints) {

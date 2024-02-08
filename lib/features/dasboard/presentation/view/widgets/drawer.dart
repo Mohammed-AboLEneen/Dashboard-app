@@ -64,17 +64,26 @@ class _CustomDrawerState extends State<CustomDrawer>
             child: Column(
               children: [
                 const Expanded(child: SizedBox()),
-                CustomDrawerItem(
-                  DrawerItemModel(
-                    title: 'Settings',
-                    icon: AssetsImages.imagesSettings,
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: CustomDrawerItem(
+                    DrawerItemModel(
+                      title: 'Settings',
+                      icon: AssetsImages.imagesSettings,
+                    ),
+                    isActive: false,
                   ),
-                  isActive: false,
                 ),
-                CustomDrawerItem(
-                  DrawerItemModel(
-                      title: 'Logout', icon: AssetsImages.imagesLogout),
-                  isActive: false,
+                Padding(
+                  padding: const EdgeInsets.only(top: 15.0),
+                  child: CustomDrawerItem(
+                    DrawerItemModel(
+                        title: 'Logout', icon: AssetsImages.imagesLogout),
+                    isActive: false,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
               ],
             ),

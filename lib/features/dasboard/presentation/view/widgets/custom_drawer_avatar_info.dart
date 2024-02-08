@@ -22,11 +22,18 @@ class CustomDrawerAvatarInfo extends StatelessWidget {
           width: 32,
           height: 32,
         ),
-        title: Text(
-          title,
-          style: AppStyles.styleSemiBold16(context),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            title,
+            style: AppStyles.styleSemiBold16(context),
+          ),
         ),
-        subtitle: Text(subtitle, style: AppStyles.styleRegular12(context)),
+        subtitle: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(subtitle, style: AppStyles.styleRegular12(context))),
         contentPadding: EdgeInsets.zero,
       ),
     );
