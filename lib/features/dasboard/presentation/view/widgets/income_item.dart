@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../../cores/utils/styles.dart';
 
-class IncomePiChartItem extends StatelessWidget {
+class IncomeItem extends StatelessWidget {
   final IncomePiChartItemModel itemModel;
 
-  const IncomePiChartItem({super.key, required this.itemModel});
+  const IncomeItem({super.key, required this.itemModel});
 
   @override
   Widget build(BuildContext context) {
