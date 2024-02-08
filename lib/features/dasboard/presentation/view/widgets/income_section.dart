@@ -57,8 +57,9 @@ class _IncomeSectionState extends State<IncomeSection> {
                 const Expanded(
                     flex: 1,
                     child: Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 5, vertical: 50),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 5,
+                      ),
                       child: IncomeChart(),
                     )),
                 const SizedBox(

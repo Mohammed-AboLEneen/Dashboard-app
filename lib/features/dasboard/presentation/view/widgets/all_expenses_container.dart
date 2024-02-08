@@ -44,7 +44,7 @@ class _AllExpensesContainerState extends State<AllExpensesContainer> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Padding(
-            padding: EdgeInsets.only(left: 16, top: 16, right: 16),
+            padding: EdgeInsets.only(left: 32, top: 16, right: 32),
             child: CustomHeader(
               header: 'All Expenses',
             ),
